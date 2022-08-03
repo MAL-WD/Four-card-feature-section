@@ -1,0 +1,135 @@
+*{
+    font-family: "Poppins";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    font-size: 15px;
+}
+.container{
+    background-color: hsl(0, 0%, 98%);
+    text-align: center;
+    height: 100vh;
+    padding: 50px 70px;
+    
+}
+.container .text{
+    margin-bottom: 50px;
+}
+.text p:first-child{
+    font-size: 40px;
+    font-weight: 200;
+    color: hsl(234, 12%, 34%);
+}
+.text h3{
+    font-size: 40px;
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+}
+.text p:last-child{
+    color: hsl(229, 6%, 66%);
+    width: 540px;
+    
+    margin: 20px auto 0;
+
+}
+.boxes{
+    display: flex;
+    gap: 40px 40px;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+.box{
+    background-color: white;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0px 10px 10px #ddd;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 230px;
+    flex-basis:30% ;
+    margin-top: 10rem;
+}
+.box:nth-child(2){
+    transform: translatey(-60%);
+}
+
+
+.box:last-child{
+    transform: translate(-15px,-60%);
+    margin: auto;
+}
+.box::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 4px;
+    width: 100%;
+    left: 0;
+}
+.box:first-child::after{
+    background-color: hsl(180, 62%, 55%);
+}
+.box:nth-child(2)::after{
+    background-color: hsl(0, 78%, 62%);
+}
+.box:nth-child(3)::after{
+    background-color: hsl(212, 86%, 64%);
+}
+.box:last-child::after{
+    background-color: hsl(34, 97%, 64%);
+}
+@media (max-width:991px) {
+    .box{
+        flex-basis: 45%;
+    }
+    .box:nth-child(2){
+        transform: translateY(0);
+    }
+    .box:nth-child(3){
+        margin: 0;
+    }
+    
+    .box:last-child{
+        transform: translate( 0);
+        margin: 0;
+
+    }
+}
+@media (max-width:767px) {
+    .box{
+        flex-basis: 100%;
+    }
+    .box:nth-child(2){
+        margin: 0;
+    }
+    .text p{
+        max-width: 100%;
+    }
+    .text p:first-child,.text h3{
+        font-size: 22px;
+    }
+    .box:first-child{
+        margin: 0;
+    }
+    .container{
+        height: 200vh;
+    }
+}
+.box h3{
+    color: hsl(234, 12%, 34%);
+    margin-bottom: 10px;
+}
+.box p{
+    color: hsl(229, 6%, 66%);
+    margin-bottom: 30px;
+}
+.box img{
+    position: absolute;
+    right: 30px;
+    
+    bottom: 20px;
+}
